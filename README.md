@@ -22,14 +22,17 @@ docker run 2024_kubernetes_post_pusher
 docker run -p 8000:8000 2024_kubernetes_post_api
 ```
 
-## Partie Kafka
+## Commandes utiles 
 
 ```bash
-git pull origin main
-
-kind delete cluster
 kind create cluster --config ./kind/config.yaml
+kind get clusters  # Vérifie qu'il existe bien un cluster kind
+kind load my_image
 
-docker build -t 2024_kubernetes_post_pusher -f ./post_pusher/Dockerfile .
-kind load docker-image 2024_kubernetes_post_pusher
+k9s -n cours-kubernetes # Controller l'état du déploiement kubernetes
+
+kubectl create ns cours-kubernetes  # Créer un namespace
+kubectl apply -n cours-kubernetes -f my_file.yaml
+
+kubectl delete all -n cours-kubernetes --all  # Supprime tout dans le namespace
 ```

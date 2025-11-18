@@ -38,14 +38,5 @@ nodes:
     containerPath: /airflow/dags
 # the three workers
 - role: worker
-  extraMounts:
-  - hostPath: ./airflow/dags
-    containerPath: /airflow/dags
 - role: worker
-  extraMounts:
-  - hostPath: ./airflow/dags
-    containerPath: /airflow/dags
 - role: worker
-  extraMounts:
-  - hostPath: ./airflow/dags
-    containerPath: /airflow/dags

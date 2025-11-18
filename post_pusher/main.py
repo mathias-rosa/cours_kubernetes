@@ -158,7 +158,7 @@ def main(multiple, kafka_host):
 # Main execution
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--multiple', action='store_true', help='Send one message and exit')
+    parser.add_argument('--multiple', action='store_true', help='Send multiple messages')
     parser.add_argument('--kafka_host', type=str, required=False, default=None, help='The Kafka host address, changing BigQuery target to Kafka')
     args = parser.parse_args()
 
