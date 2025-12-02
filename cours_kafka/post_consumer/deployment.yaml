@@ -16,4 +16,4 @@ spec:
       - name: post-consumer-kafka
         image: kubernetes_post_consumer
         imagePullPolicy: Never
-        command: ["python", "main.py"]
+        command: ["python", "main.py", "--kafka_host=kafka-broker-service:9092"]
