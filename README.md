@@ -37,3 +37,8 @@ kubectl apply -n cours-kubernetes -f my_file.yaml
 
 kubectl delete all -n cours-kubernetes --all  # Supprime tout dans le namespace
 ```
+
+# Pour redémarer un deploiement apres modification
+```bash
+kubectl rollout restart deployment my_deployment -n cours-kubernetes
+```
