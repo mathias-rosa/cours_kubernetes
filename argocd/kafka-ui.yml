@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kafka-ui
-  namespace: argocd
+  namespace: kubernetes-project
 spec:
   project: default
   source:
@@ -11,10 +11,9 @@ spec:
     path: ui
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd-projet
+    namespace: kubernetes-project
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+
